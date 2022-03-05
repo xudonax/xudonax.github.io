@@ -1,12 +1,11 @@
 body {
-  /*width: 100vw;*/
   height: 100vh;
   background: linear-gradient(
-      to bottom,
-      #fcf434 25%,
-      #ffffff 25% 50%,
-      #9c59d1 50% 75%,
-      #2c2c2c 75%
+      180deg,
+      #fcf434 0%,
+      #eeeeee 33%,
+      #9c59d1 66%,
+      #2c2c2c 100%
     )
     fixed;
 }
@@ -18,7 +17,7 @@ div.card {
   left: 5vw;
   width: 90vw;
   border-radius: 5px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px) saturate(0.8);
 }
 
 li.list-group-item {
