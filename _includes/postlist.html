@@ -4,16 +4,11 @@
   {% assign posts = site.posts %}
 {% endif %}
 
-<h1>POSTS</h1>
-
 {%- if posts.size > 0 -%}
-  {%- if page.list_title -%}
-    <h2 class="post-list-heading">{{ page.list_title }}</h2>
-  {%- endif -%}
-  <ul class="post-list">
+  <ul class="list-group list-group-flush">
     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
     {%- for post in posts -%}
-    <li>
+    <li class="list-group-item">
       <span class="post-meta">{{ post.date | date: date_format }}</span>
       <h3>
         <a class="post-link" href="{{ post.url | relative_url }}">
@@ -28,7 +23,7 @@
   </ul>
 
   {% if site.paginate %}
-    <div class="pager">
+    <div class="card-body">
       <ul class="pagination">
       {%- if paginator.previous_page %}
         <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>

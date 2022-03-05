@@ -1,0 +1,37 @@
+---
+layout: post
+title: "IPv6 op Hogeschool Utrecht"
+date: 2009-04-08 10:47:17 +0200
+categories: tech ipv6
+author: Fluffy
+---
+
+Na een hoop geklooi om mijn draadloze verbinding weer goed aan de gang te krijgen op de Hogeschool Utrecht na het overschakelen van de netwerken **hu-eduroam**, **hu-eduroam-vista** en **hu-eduroam-wpa** naar **eduroam** en **hu-eduroam-wpa** ontdekte ik dat er op de Hogeschool Utrecht nu ook IPv6 adressen worden uitgedeeld!
+
+<!--more-->
+
+Mijn Eee PC 901 heeft bijvoorbeeld deze adressen:
+
+    ath0      Link encap:Ethernet  HWaddr 00:0e:8e:20:6c:dd
+    inet addr:145.89.204.125  Bcast:145.89.207.255  Mask:255.255.252.0
+    inet6 addr: 2002:9159:ce49:b:20e:8eff:fe20:6cdd/64 Scope:Global
+    inet6 addr: fec0::b:20e:8eff:fe20:6cdd/64 Scope:Site
+    inet6 addr: 2002:9159:ce4d:b:20e:8eff:fe20:6cdd/64 Scope:Global
+    inet6 addr: 2002:9159:cfa8:d:20e:8eff:fe20:6cdd/64 Scope:Global
+    inet6 addr: fec0::d:20e:8eff:fe20:6cdd/64 Scope:Site
+    inet6 addr: 2002:9159:cf5e:d:20e:8eff:fe20:6cdd/64 Scope:Global
+    inet6 addr: fec0::8:20e:8eff:fe20:6cdd/64 Scope:Site
+    inet6 addr: 2002:9159:ccff:8:20e:8eff:fe20:6cdd/64 Scope:Global
+    inet6 addr: 2001:610:310:b640:20e:8eff:fe20:6cdd/64 Scope:Global
+    inet6 addr: fe80::20e:8eff:fe20:6cdd/64 Scope:Link
+    UP BROADCAST NOTRAILERS RUNNING MULTICAST  MTU:1500  Metric:1
+    RX packets:787251 errors:0 dropped:0 overruns:0 frame:0
+    TX packets:105020 errors:0 dropped:0 overruns:0 carrier:0
+    collisions:0 txqueuelen:1000
+    RX bytes:188832043 (180.0 MiB)  TX bytes:23671678 (22.5 MiB)
+
+Dit zijn wel veel IPv6 adressen, daar je er slechts 1 hoort te hebben die Global is. Ik zie net dat het allemaal hetzelfde adres is. Mogelijk heb ik er zoveel gekregen omdat mijn laptopje door een hoop Access Points is gegaan vandaag een daardoor een hoop adressen heeft gekregen.
+
+Nu kan ik eindelijk Miredo compleet verwijderen. Miredo is een Teredo client voor Mac OS X, \*BSD en Linux. Teredo is een protocol van Microsoft wat ervoor moet zorgen dat je thuis achter je NAT router ook een IPv6 adres krijgt en via een automatische tunnel een verbinding hebt met het IPv6 internet. Dit werkte redelijk, maar niet erg snel. Nu is dit gelukkig niet meer nodig.
+
+Blijf zo doorgaan daar op de HU!
