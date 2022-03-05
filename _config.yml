@@ -46,6 +46,7 @@ author:
   twitter: xudonax
 
 excerpt_separator: "<!--more-->"
+permalink: "/posts/:year/:month/:day/:title"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
